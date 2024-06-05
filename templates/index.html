@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="viewport">
+        <div id="content">
+            <div class="image-container" style="top: 200px; left: 200px;">
+                <img src="{{ url_for('static', filename='valve.jpg') }}" class="action-button img-button">
+                <span class="description">Valve</span>
+            </div>
+            <!-- Repeat the above block for each image with its description -->
+            <div class="image-container" style="top: 200px; left: 250px;">
+                <img src="{{ url_for('static', filename='valve.jpg') }}" class="action-button img-button">
+                <span class="description">Valve</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="hidden">
+        <div id="popup-content">
+            <span id="close-popup">&times;</span>
+            <div class="input-container">
+                <label for="input1">Input 1:</label>
+                <input type="text" id="input1" placeholder="Input 1">
+            </div>
+            <div class="input-container">
+                <label for="input2">Input 2:</label>
+                <input type="text" id="input2" placeholder="Input 2">
+            </div>
+            <div class="input-container">
+                <label for="input3">Input 3:</label>
+                <input type="text" id="input3" placeholder="Input 3">
+            </div>
+            <button id="save-button">Save</button>
+        </div>
+    </div>
+
+    <div id="zoom-container">
+        <button id="zoom-in" class="zoom-button">+</button>
+        <button id="zoom-out" class="zoom-button">-</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

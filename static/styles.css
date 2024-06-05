@@ -1,0 +1,151 @@
+body {
+    background-color: #141414; /* Dark gray color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hidden off-screen */
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    transition: right 0.3s;
+    z-index: 1000; /* Increased z-index */
+}
+
+.hidden {
+    display: none;
+}
+
+#popup-content {
+    padding: 20px;
+}
+
+#close-popup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+#viewport {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200vw; /* Double the viewport width for horizontal scroll */
+    height: 200vh; /* Double the viewport height for vertical scroll */
+}
+
+.img-button {
+    width: 100px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.description {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: -10%; /* Adjust this value as needed */
+    color: #bbbbbb
+}
+
+#sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-header h1 {
+    margin: 0;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#zoom-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.zoom-button {
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.zoom-button:hover {
+    background-color: #f0f0f0;
+}
